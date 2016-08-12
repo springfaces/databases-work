@@ -24,9 +24,9 @@ public class App {
 			}
 		try {
 			List<Offer> offers = new ArrayList<Offer>();
-			offers.add((new Offer("Dave", "@email", "Dave programmer")));
-			offers.add((new Offer("Dave1", "@email", "Dave1 programmer")));
-			offers.add((new Offer("Dave2", "@email", "Dave12 programmer")));
+			offers.add((new Offer(1, "Dave", "@email", "Dave programmer")));
+			offers.add((new Offer(2, "Dave1", "@email", "Dave1 programmer")));
+			offers.add((new Offer(3, "Dave2", "@email", "Dave12 programmer")));
 			
 			int [] rvals = offersDao.create(offers);
 			for (int i : rvals) {
