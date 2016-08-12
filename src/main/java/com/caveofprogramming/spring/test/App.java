@@ -1,5 +1,6 @@
 package com.caveofprogramming.spring.test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
@@ -22,7 +23,16 @@ public class App {
 				System.out.println("Can not update..!");
 			}
 		try {
+			List<Offer> offers = new ArrayList<Offer>();
+			offers.add((new Offer("Dave", "@email", "Dave programmer")));
+			offers.add((new Offer("Dave1", "@email", "Dave1 programmer")));
+			offers.add((new Offer("Dave2", "@email", "Dave12 programmer")));
 			
+			int [] rvals = offersDao.create(offers);
+			for (int i : rvals) {
+				System.out.println("updated : " + i + " rows");
+			}
+
 			/*Offer offer1 = new Offer("dave", "dave@raghu.com", "dave coding");
 			Offer offer2 = new Offer("Karen", "dave@raghu.com", "testing coding");
 			
@@ -31,7 +41,7 @@ public class App {
 			}
 			if(offersDao.create(offer2)) {
 				System.out.println("Created offer object");
-			}*/
+			}
 			
 			//offersDao.delete(1);
 			List<Offer> offers = offersDao.getOffer();
@@ -40,7 +50,7 @@ public class App {
 			}
 			
 			Offer offer = offersDao.getOffer(1);
-			System.out.println("offer :" + offer.toString());
+			System.out.println("offer :" + offer.toString());*/
 		} catch (DataAccessException ex) {
 			System.out.println(ex.getMessage());
 		}
