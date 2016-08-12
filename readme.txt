@@ -13,3 +13,11 @@ Working with Databases
 	adding an update emthod to the dao
 	batch updates prepared statements
 	transactions
+
+	Downloading mysql jar using  maven
+	
+	
+	common dbcp download common-dbcp 1.4 jar
+	Class BasicDataSource  
+	
+	
